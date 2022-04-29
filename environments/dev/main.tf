@@ -22,13 +22,13 @@ provider "google" {
 }
 
 resource "google_sql_database" "database" {
-  name     = "PPL-database"
+  name     = "ppl-database"
   instance = google_sql_database_instance.instance.name
 }
 
 # See versions at https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance#database_version
 resource "google_sql_database_instance" "instance" {
-  name             = "PPL-database-instance"
+  name             = "ppl-database-instance"
   region           = "europe-west1"
   database_version = "MYSQL_8_0"
   settings {
